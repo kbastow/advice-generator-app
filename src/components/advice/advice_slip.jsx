@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const AdviceComponent = () => {
   const [data, setData] = useState({
     id: "123",
-    advice: "Generic placeholders can also offer words of advice.",
+    advice: "Generating words of advice...",
   });
 
   useEffect(() => {
