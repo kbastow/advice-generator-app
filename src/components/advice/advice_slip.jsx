@@ -8,18 +8,23 @@ const AdviceComponent = () => {
     advice: "Generating words of advice...",
   });
 
+  const [buttonClick, setButtonClick] = useState(0);
+
   useEffect(() => {
     fetch("https://api.adviceslip.com/advice")
-    .then((response) => response.json())
-    .then((data) => 
-    setData({
-      id: data.slip.id,
-      advice: data.slip.advice,
-    })
-  )
-  .catch((error) => console.error(error));
+      .then((response) => response.json())
+      .then((data) =>
+        setData({
+          id: data.slip.id,
+          advice: data.slip.advice,
+        })
+      )
+      .catch((error) => console.error(error));
+  }, [buttonClick]);
 
-  }, []);
+  const getAdvice = () => {
+    setButtonClick(buttonClick + 1);
+  };
 
   return (
     <Box
@@ -41,6 +46,7 @@ const AdviceComponent = () => {
         src="/src/assets/pattern-divider-mobile.svg"
       ></img>
       <button
+        onClick={getAdvice}
         style={{
           background: "hsl(150, 100%, 66%)",
           border: "none",
@@ -53,6 +59,7 @@ const AdviceComponent = () => {
           display: "block",
           margin: "0 auto",
           bottom: "-4.5rem",
+          cursor: "pointer",
         }}
       >
         <img
@@ -64,6 +71,6 @@ const AdviceComponent = () => {
       </button>
     </Box>
   );
-}
+};
 
 export default AdviceComponent;
