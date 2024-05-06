@@ -1,0 +1,12 @@
+p.advice-label {
+  color: hsl(150, 100%, 66%);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.advice-content {
+  color: hsl(193, 38%, 86%);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
