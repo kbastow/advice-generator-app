@@ -39,13 +39,13 @@ function AdviceGenerator() {
       <p className="advice-content">&quot;{data.advice}&quot;</p>
       <img
         className="content-divider"
-        src="/src/assets/pattern-divider-mobile.svg"
+        src="/advice-generator-app/src/assets/pattern-divider-mobile.svg"
         alt="divider"
       />
       <button className="advice-button" onClick={fetchAdvice}>
         <img
           className="center"
-          src="/src/assets/icon-dice.svg"
+          src="/advice-generator-app/src/assets/icon-dice.svg"
           alt="dice icon"
           style={{ maxWidth: "50%" }}
         />
