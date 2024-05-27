@@ -12,3 +12,23 @@ p.advice-label {
   margin: 3rem auto;
   padding: 0 1rem;
 }
+
+.advice-button {
+  background: hsl(150, 100%, 66%);
+  border: none;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  bottom: -4.5rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.advice-button:hover {
+  box-shadow: 0 0 20px 10px hsl(150, 100%, 66%, 25%);
+}
